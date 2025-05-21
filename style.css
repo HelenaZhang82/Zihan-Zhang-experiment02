@@ -1,14 +1,28 @@
 body {
-    margin: 0;
+    margin: 0; 
     /* feel free to change/customize this gradient and font */
-    background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
     /* feel free to change/customize font */
     font-family: 'Arial', sans-serif;
+    justify-content: center;  
+    align-items: center;
+
+    background-image: url(https://art.ngfiles.com/images/5785000/5785898_891725_faviothecassero_cuphead-background.666f6297fa03fb5f85b5ede54dd7ddbc.webp?f1718364722); 
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+       
 }
 
 .flex-container {
     /* Make this into a flexbox using display: flex */
     /* Use flexbox properties to stack your tiles vertically and center them */
+    display: flex;
+    width: 100vw;
+    height: 50vw;
+    flex-direction: column;
+    align-items: center;
+    
+    
 }
 
 .flex-tile {
@@ -20,11 +34,81 @@ body {
 
     /* spacing tiles */
     margin: 5%;
+    margin-bottom: 10%;
     padding: 20px;
 
     /* background color for tile, feel free to change */
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    border-radius: 10%;
+    transition: 1s;
+    
+    
+}
+
+.flex-tile:hover{
+    background-color:rgb(75, 106, 168);
 }
 
 
 
+img{
+    width: 250px;
+    height: 300px;
+    margin: 8%;
+    
+    border: 8px rgb(84, 119, 148) groove;
+}
+
+@font-face{
+    font-family: cuphead;
+    src:url(./huggable/FontdinerdotcomHuggable.ttf)
+}
+
+p{
+    font-family: cuphead;
+    font-size: 35px;
+   
+}
+
+.text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:larger;
+}
+
+button {
+    cursor: pointer;
+    background-color: darkred;
+    color: rgb(255, 248, 194);
+    font-family: cuphead;
+    font-size: 30px;
+    margin-bottom: 7%;
+    border: 5px black groove;
+    box-shadow: 0 9px rgb(71, 74, 100);
+    transition: 0.3s;
+    
+}
+
+.btn:hover{
+    color: rgb(50, 118, 255);
+    background-color: rgb(255, 248, 194);
+}
+
+.btn:active{
+    transform: translateY(6px);
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+img {
+  animation: wiggle 3s infinite;
+}
